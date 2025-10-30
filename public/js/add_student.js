@@ -70,7 +70,7 @@ addStudentForm.addEventListener("submit", function (e) {
             inputVegan.value = '';
             inputVegetarian.value = '';
             inputDairy.value = '';
-            inputGluten = '';
+            inputGluten.value = '';
             inputKosher.value = '';
             inputHalal.value = '';
         }
@@ -115,7 +115,7 @@ addRowToTable = (data) => {
     let halalCell = document.createElement("TD");
 
     // Fill the cells with correct data
-    idCell.innerText = newRow.id;
+    idCell.innerText = newRow.studentID;
     firstNameCell.innerText = newRow.firstName;
     lastNameCell.innerText = newRow.lastName;
     usernameCell.innerText = newRow.student_userName;
@@ -123,7 +123,7 @@ addRowToTable = (data) => {
     emailCell.innerText = newRow.student_email;
     veganCell.innerText = newRow.isVegan;
     vegetarianCell.innerText = newRow.isVegetarian;
-    dairyCell.innerText = newRow.isDairy;
+    dairyCell.innerText = newRow.isDairyFree;
     glutenCell.innerText = newRow.isGlutenFree;
     kosherCell.innerText = newRow.isKosher;
     halalCell.innerText = newRow.isHalal;
