@@ -12,7 +12,7 @@ var pool = mysql.createPool({
     host            : '127.0.0.1',
     user            : 'root',
     password        : 'ally0824!!',
-    database        : 'demo'
+    database        : 'foodShare' // can change to foodShare when ready 
 });
 
 // Export it for use in our applicaiton
