@@ -15,6 +15,7 @@
                 {{@key}}
             </th>
             {{/each}}
+            <th>delete</th>
         </tr>
     </thead>
 
@@ -23,7 +24,7 @@
 
         {{!-- For each row, print the id, fname, lname, homeworld and age, in order --}}
         {{#each data}}
-        <tr>
+        <tr data-value={{this.studentID}}>
             <td>{{this.studentID}}</td>
             <td>{{this.firstName}}</td>
             <td>{{this.lastName}}</td>
@@ -36,10 +37,12 @@
             <td>{{this.isGlutenFree}}</td>
             <td>{{this.isKosher}}</td>
             <td>{{this.isHalal}}</td>
+            <td><button onclick="deleteStudent({{this.studentID}})">Delete</button></td>
         </tr>
         {{/each}}
     </tbody>
 </table>
+<script src="./js/delete_student.js"></script>
 
 <!-- /views/index.hbs -->
 

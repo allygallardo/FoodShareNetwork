@@ -105,6 +105,23 @@ app.post('/add-student-ajax', function(req, res)
     })
 });
 
+app.delete('/delete-student-ajax/', function(req,res,next){
+  let data = req.body;
+  let studentID = parseInt(data.studentID);
+  let deleteStudent= `DELETE FROM Students WHERE studentID = ?`;
+
+        db.pool.query(deleteStudent, [studentID], function(error, rows, fields){
+            if (error) {
+
+            // Log the error to the terminal so we know what went wrong, and send the visitor an HTTP response 400 indicating it was a bad request.
+            console.log(error);
+            res.sendStatus(400);
+            } else {
+                res.sendStatus(204);
+            }
+        })
+});
+
 // Part 3: LISTENER
 app.listen(PORT, function(){            // This is the basic syntax for what is called the 'listener' which receives incoming requests on the specified PORT.
     console.log('Express started on http://localhost:' + PORT + '; press Ctrl-C to terminate.')

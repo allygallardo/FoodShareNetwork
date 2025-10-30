@@ -114,6 +114,8 @@ addRowToTable = (data) => {
     let kosherCell = document.createElement("TD");
     let halalCell = document.createElement("TD");
 
+    let deleteCell = document.createElement("TD");
+
     // Fill the cells with correct data
     idCell.innerText = newRow.studentID;
     firstNameCell.innerText = newRow.firstName;
@@ -128,6 +130,12 @@ addRowToTable = (data) => {
     kosherCell.innerText = newRow.isKosher;
     halalCell.innerText = newRow.isHalal;
 
+    deleteCell = document.createElement("button");
+    deleteCell.innerHTML = "Delete";
+    deleteCell.onclick = function(){
+        deleteStudent(newRow.studentID);
+    };
+
     // Add the cells to the row 
     row.appendChild(idCell);
     row.appendChild(firstNameCell);
@@ -141,6 +149,10 @@ addRowToTable = (data) => {
     row.appendChild(glutenCell);
     row.appendChild(kosherCell);
     row.appendChild(halalCell);
+    row.appendChild(deleteCell);
+
+    // Add a row attribute so the deleteRow function can find a newly added row
+    row.setAttribute('data-value', newRow.studentID);
     
     // Add the row to the table
     currentTable.appendChild(row);
