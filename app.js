@@ -18,7 +18,6 @@ app.set('view engine', '.hbs');                 // Tell express to use the handl
 
 // Part 2: ROUTES
 // app.js
-
 app.get('/', function(req, res)
     {  
         let query1 = "SELECT * FROM Students;";               // Define our query
