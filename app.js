@@ -29,6 +29,7 @@ app.get('/', function(req, res)
         })                                                      // an object where 'data' is equal to the 'rows' we
     });                                                         // received back from the query
 
+// CREATE
 app.post('/add-student-ajax', function(req, res) 
 {
     // Capture the incoming data and parse it back to a JS object
@@ -105,6 +106,7 @@ app.post('/add-student-ajax', function(req, res)
     })
 });
 
+//DELETE
 app.delete('/delete-student-ajax/', function(req,res,next){
   let data = req.body;
   let studentID = parseInt(data.studentID);
