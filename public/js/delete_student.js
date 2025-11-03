@@ -21,6 +21,7 @@ function deleteStudent(studentID) {
             console.log("There was an error with the input.")
         }
     }
+    
     // Send the request and wait for the response
     xhttp.send(JSON.stringify(data));
 };

@@ -18,7 +18,6 @@ app.set('view engine', '.hbs');                 // Tell express to use the handl
 
 // Part 2: ROUTES
 // app.js
-
 app.get('/', function(req, res)
     {  
         let query1 = "SELECT * FROM Students;";               // Define our query
@@ -123,6 +122,7 @@ app.delete('/delete-student-ajax/', function(req,res,next){
             }
         })
 });
+
 
 // Part 3: LISTENER
 app.listen(PORT, function(){            // This is the basic syntax for what is called the 'listener' which receives incoming requests on the specified PORT.
