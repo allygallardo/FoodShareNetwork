@@ -101,12 +101,12 @@ export const sub = async (req, res, next) =>{
     }
 };
 
+// TO TEST
 export const getByTag = async (req, res, next) =>{
-    const tags = req.query.tags
-    console.log(tags)
+    const tags = req.query.tags.split(",")
     try{
         // bring the most liked posts
-        const posts = await Post.find().sort({likes:-1});
+        const posts = await Post.find({tags:{$in: tags }}).limit(20);
         res.status(200).json(posts)
     }catch (err) {
         next(err);
