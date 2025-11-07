@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Home | FoodShare Network</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #81BC06, #a1d85e);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #387C12;
+      margin: 0;
+    }
+
+    .settings-icon {
+      font-size: 1.5rem;
+      color: #636e72;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .settings-icon:hover {
+      color: #387C12;
+    }
+
+    .container {
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 800px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      text-align: left;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      color: #2d3436;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #2d3436;
+      margin-bottom: 1rem;
+    }
+
+    .card button {
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #387C12;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .card button:hover {
+      background-color: #636e72;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      color: #2d3436;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 700px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .container .card:nth-child(3) {
+        grid-column: span 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FoodShare Network - Community</h1>
+    <span class="settings-icon" title="Community Settings">⚙️</span>
+  </header>
+
+  <div class="container">
+    <!-- View Community Blog Posts -->
+    <div class="card">
+      <h2>View Community Blog Posts</h2>
+      <p>Read updates, recipes, and stories from the FoodShare community.</p>
+      <button>View Blog Posts</button>
+    </div>
+
+    <!-- View Your Posts -->
+    <div class="card">
+      <h2>View Your Posts</h2>
+      <p>See all your published and drafted posts in one place.</p>
+      <button>View My Posts</button>
+    </div>
+
+    <!-- Create New Blog Post -->
+    <div class="card">
+      <h2>Create New Blog Post</h2>
+      <p>Share your story, recipes, or community updates with others.</p>
+      <button>Create Post</button>
+    </div>
+  </div>
+
+</body>
+</html>
+
