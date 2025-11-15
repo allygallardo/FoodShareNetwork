@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodShare Network - Community Forum</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #81BC06, #a1d85e);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+     width: 100%;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #387C12;
+      margin: 0;
+    }
+
+    .settings-icon {
+      font-size: 1.5rem;
+      color: #636e72;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .settings-icon:hover {
+      color: #387C12;
+    }
+
+    .container {
+      margin-top: 2rem;
+      background-color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 2rem;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    h2 {
+      color: #2d3436;
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    .post-card {
+      background: #f1f2f6;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .post-card:hover {
+      background: #dfe6e9;
+      transform: translateY(-2px);
+    }
+
+    .post-title {
+      font-size: 1.2rem;
+      color: #2d3436;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .post-meta {
+      font-size: 0.9rem;
+      color: #636e72;
+      margin-top: 0.3rem;
+    }
+
+    .top-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .top-buttons button {
+      flex: 1;
+      margin: 0 0.3rem;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #636e72;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .top-buttons button:hover {
+      background-color: #b2bec3;
+    }
+
+    .create-btn {
+      background-color: #387C12 !important;
+    }
+
+    .create-btn:hover {
+      background-color: #636e72 !important;
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 1rem;
+      color: #636e72;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FoodShare Network - Community Forum</h1>
+    <span class="settings-icon" title="Settings">⚙️</span>
+  </header>
+
+  <div class="container">
+    <h2>Community Blog Forum</h2>
+
+    <div class="top-buttons">
+      <button>All Posts</button>
+      <button>Your Posts</button>
+      <button>Create New Post</button>
+    </div>
+
+    <div class="post-card">
+      <p class="post-title">How to Save Money on Healthy Groceries</p>
+      <p class="post-meta">Posted by Maria • 2 hours ago</p>
+    </div>
+
+    <div class="post-card">
+      <p class="post-title">Community Pantry Adds Fresh Produce</p>
+      <p class="post-meta">Posted by GreenGrocery • 1 day ago</p>
+    </div>
+
+    <div class="post-card">
+      <p class="post-title">Tips for First-Time Volunteers</p>
+      <p class="post-meta">Posted by Liam • 3 days ago</p>
+    </div>
+
+    <p class="footer-text">New posts appear from newest to oldest.</p>
+  </div>
+
+</body>
+</html>
