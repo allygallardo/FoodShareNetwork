@@ -13,6 +13,9 @@ const CommentSchema = new mongoose.Schema(
     comment: {
         type: String,
         required: true,
+    },
+    imgURL: {
+        type: String,
     }
 });
 

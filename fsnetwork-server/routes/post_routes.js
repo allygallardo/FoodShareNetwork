@@ -31,6 +31,8 @@ router.get("/sub", verifyToken, sub)
 //search posts by tags
 router.get("/tags", getByTag)
 
+//delete all posts by a specific user
+
 
 
 export default router;
