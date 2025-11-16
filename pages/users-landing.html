@@ -1,52 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Dashboard | FoodShare Network</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page - User | FoodShare Network</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #81BC06, #a1d85e);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  <!-- Shared CSS -->
-  <link rel="stylesheet" href="styles.css">
+    header {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  <!-- Header + Nav -->
-  <script src="layout.js" defer></script>
+    header h1 {
+      font-size: 1.5rem;
+      color: #387C12;
+      margin: 0;
+    }
+
+    .settings-icon {
+      font-size: 1.5rem;
+      color: #636e72;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .settings-icon:hover {
+      color: #387C12;
+    }
+
+    .container {
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      color: #2d3436;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .activity-log ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .activity-log li {
+      background-color: #f1f2f6;
+      border-radius: 6px;
+      padding: 0.8rem;
+      margin-bottom: 0.6rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .activity-log li:hover {
+      background-color: #dfe6e9;
+    }
+
+    .order-box p {
+      margin: 0.4rem 0;
+      color: #2d3436;
+    }
+
+    .order-box a {
+      color: #387C12;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .order-box a:hover {
+      text-decoration: underline;
+    }
+
+    .community-box p,
+    .providers-box p {
+      margin-bottom: 1rem;
+      color: #2d3436;
+    }
+
+    .community-box button,
+    .providers-box button,
+    .order-box button{
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #387C12;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .community-box button:hover,
+    .providers-box button:hover {
+      background-color: #636e72;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>FoodShare Network - User Dashboard</h1>
+    <span class="settings-icon" title="User Settings">⚙️</span>
+  </header>
 
   <div class="container">
-    <h2>User Dashboard</h2>
-
-    <!-- Current Activity Log -->
-    <div class="card">
-      <h3>Current Activity</h3>
+    <!-- Current Activity -->
+    <div class="card activity-log">
+      <h2>Current Activity</h2>
       <ul>
-        <li onclick="alert('Open activity details (coming soon)')">Green Grocery has 10% off all produce</li>
-        <li onclick="alert('Open activity details (coming soon)')">Food Pantry 4 Students offering commodities Nov. 7th</li>
+        <li>Green Grocery has 10% off all produce</li>
+        <li>Food Pantry 4 Students offering commodities Nov. 7th </li>
       </ul>
     </div>
 
-    <!-- Current Order -->
-    <div class="card">
-      <h3>Current Order</h3>
+    <!-- Order Box -->
+    <div class="card order-box">
+      <h2>Current Order</h2>
       <p><strong>Order #1841</strong></p>
       <p>Status: <span style="color: #387C12;">Ready for pickup</span></p>
-      <a href="#">View Order History</a>
+      <button>View Order History</button>
     </div>
 
     <!-- Community Box -->
-    <div class="card">
-      <h3>Community</h3>
+    <div class="card community-box">
+      <h2>Community</h2>
       <p>Connect, share, and help others in your area.</p>
-      <button onclick="alert('Navigate to Community Page (coming soon)')">Go to Community Page</button>
+      <button >Go to Community Page</button>
     </div>
 
-    <!-- Find Providers -->
-    <div class="card">
-      <h3>Find Providers</h3>
+    <!-- Find Providers-->
+    <div class="card providers-box">
+      <h2>Find Providers</h2>
       <p>Search for nearby food pantries or partner stores.</p>
-      <button onclick="alert('Find Providers feature coming soon')">Search Providers</button>
+      <button>Search Providers</button>
     </div>
-
   </div>
+
 </body>
 </html>
