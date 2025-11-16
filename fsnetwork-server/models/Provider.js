@@ -35,6 +35,7 @@ const ProviderSchema = new mongoose.Schema(
     phoneNumber: {
         type: String,
         required: true,
+        unique: true,
     },
     possibleFoods: {
         type: [String],

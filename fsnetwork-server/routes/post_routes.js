@@ -1,5 +1,5 @@
 import express from "express";
-import {addPost, updatePost, deletePost, getPost, random, trend, sub, getByTag} from "../controllers/post_controller.js";
+import {addPost, updatePost, deletePost, getPost, getPosts, random, trend, sub, getByTag} from "../controllers/post_controller.js";
 import { verifyToken } from "../verifyToken.js";
 
 const router = express.Router();
@@ -15,6 +15,9 @@ router.delete("/:id", verifyToken, deletePost)
 
 //get a post
 router.get("/find/:id", getPost)
+
+// get all posts 
+router.get("/all", getPosts)
 
 //get random posts
 router.get("/random", random)

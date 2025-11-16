@@ -62,6 +62,15 @@ export const getPost = async (req, res, next) =>{
     }
 };
 
+export const getPosts = async (req, res, next) => {
+  try {
+    const posts = await Post.find().sort({ "_id": -1 });
+    res.status(200).json(posts);
+  } catch (err) {
+        next(err);
+  }
+};
+
 export const random = async (req, res, next) =>{
     try{
         const posts = await Post.aggregrate([{ $sample: { size: 40 } }]);

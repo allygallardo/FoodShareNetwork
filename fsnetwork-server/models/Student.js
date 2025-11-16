@@ -4,7 +4,6 @@ const StudentSchema = new mongoose.Schema(
     {
     fname: {
         type: String,
-        required: true,
     },
     lname: {
         type: String,
@@ -31,27 +30,24 @@ const StudentSchema = new mongoose.Schema(
     },
     isVegan: {
         type: Boolean,
-        required: true,
     },
     isVegetarian: {
         type: Boolean,
-        required: true,
     },
     isDairyFree: {
         type: Boolean,
-        required: true,
     },
     isGlutenFree: {
         type: Boolean,
-        required: true,
     },
     isKosher: {
         type: Boolean,
-        required: true,
     },
     isHalal: {
         type: Boolean,
-        required: true,
+    },
+    isNutFree: {
+        type: Boolean,
     }
 
 });
