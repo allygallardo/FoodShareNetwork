@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodShare Network - Order History</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #81BC06, #a1d85e);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #387C12;
+      margin: 0;
+    }
+
+    .settings-icon {
+      font-size: 1.5rem;
+      color: #636e72;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .settings-icon:hover {
+      color: #387C12;
+    }
+
+    .container {
+      margin-top: 2rem;
+      background-color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 2rem;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    h2 {
+      color: #2d3436;
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    /* Order Card Style */
+    .order-card {
+      background: #f1f2f6;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .order-card:hover {
+      background: #dfe6e9;
+      transform: translateY(-2px);
+    }
+
+    .order-provider {
+      font-size: 1.2rem;
+      color: #2d3436;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .order-meta {
+      font-size: 0.9rem;
+      color: #636e72;
+      margin-top: 0.3rem;
+    }
+
+    .status {
+      font-weight: bold;
+    }
+
+    .completed {
+      color: #387C12;
+    }
+
+    .pending {
+      color: #d35400;
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 1rem;
+      color: #636e72;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FoodShare Network - Order History</h1>
+    <span class="settings-icon" title="Settings">⚙️</span>
+  </header>
+
+  <div class="container">
+    <h2>Past Orders</h2>
+
+    <div class="order-card">
+      <p class="order-provider">Meijer</p>
+      <p class="order-meta">Items: Organic Eggs (2), Spinach (1), Whole Milk (1)</p>
+      <p class="order-meta">Total: $18.50 • Scheduled: Feb 10, 2025</p>
+      <p class="order-meta status pending">Status: Pending Pickup</p>
+
+    </div>
+
+    <div class="order-card">
+      <p class="order-provider">Walmart</p>
+      <p class="order-meta">Items: Chicken Breast (2 lb), Brown Rice (1), Broccoli (2)</p>
+      <p class="order-meta">Total: $27.40 • Scheduled: Jan 28, 2025</p>
+      <p class="order-meta status completed">Status: Completed</p>
+    </div>
+
+    <div class="order-card">
+      <p class="order-provider">Whole Foods</p>
+      <p class="order-meta">Items: Blueberries (2), Kale (1), Oat Milk (1)</p>
+      <p class="order-meta">Total: $14.75 • Scheduled: Jan 16, 2025</p>
+      <p class="order-meta status completed">Status: Completed</p>
+    </div>
+
+    <p class="footer-text">Most recent orders appear first.</p>
+  </div>
+
+</body>
+</html>
