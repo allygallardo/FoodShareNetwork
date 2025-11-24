@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Notifications | FoodShare Network</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #81BC06, #a1d85e);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #387C12;
+      margin: 0;
+    }
+
+    .settings-icon {
+      font-size: 1.5rem;
+      color: #636e72;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .settings-icon:hover {
+      color: #387C12;
+    }
+
+    .container {
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 800px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .notification-card {
+      background-color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .notification-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .notification-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .notification-header h2 {
+      font-size: 1.2rem;
+      color: #2d3436;
+      margin: 0;
+    }
+
+    .notification-description {
+      color: #2d3436;
+      margin: 0.5rem 0;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .edit-button {
+      background-color: #387C12;
+      color: white;
+    }
+
+    .edit-button:hover {
+      background-color: #2e6a0f;
+    }
+
+    .delete-button {
+      background-color: #d63031;
+      color: white;
+    }
+
+    .delete-button:hover {
+      background-color: #b71c1c;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      color: #2d3436;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 700px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FoodShare Network - Manage Notifications</h1>
+    <span class="settings-icon" title="Provider Settings">⚙️</span>
+  </header>
+
+  <div class="container">
+    <div class="notification-card">
+      <div class="notification-header">
+        <h2>Commodities restocking 11/25!</h2>
+      </div>
+      <p class="notification-description">New commodities will be available from 7am - 2pm!</p>
+      <div class="button-group">
+        <button class="edit-button">Edit</button>
+        <button class="delete-button">Delete</button>
+      </div>
+    </div>
+
+    <div class="notification-card">
+      <div class="notification-header">
+        <h2>Flash Sale!</h2>
+      </div>
+      <p class="notification-description">All baked goods will be half-off the day after Thanksgiving!</p>
+      <div class="button-group">
+        <button class="edit-button">Edit</button>
+        <button class="delete-button">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 FoodShare Network
+  </footer>
+</body>
+</html>
