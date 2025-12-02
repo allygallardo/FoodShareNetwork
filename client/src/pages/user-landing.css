@@ -1,0 +1,128 @@
+span {
+  color: #387C12;
+}
+
+body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #81BC06, #a1d85e);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #387C12;
+      margin: 0;
+    }
+
+    .settings-icon {
+      font-size: 1.5rem;
+      color: #636e72;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .settings-icon:hover {
+      color: #387C12;
+    }
+
+    .container {
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      color: #2d3436;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .activity-log ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .activity-log li {
+      background-color: #f1f2f6;
+      border-radius: 6px;
+      padding: 0.8rem;
+      margin-bottom: 0.6rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .activity-log li:hover {
+      background-color: #dfe6e9;
+    }
+
+    .order-box p {
+      margin: 0.4rem 0;
+      color: #2d3436;
+    }
+
+    .order-box a {
+      color: #387C12;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .order-box a:hover {
+      text-decoration: underline;
+    }
+
+    .community-box p,
+    .providers-box p {
+      margin-bottom: 1rem;
+      color: #2d3436;
+    }
+
+    .community-box button,
+    .providers-box button,
+    .order-box button{
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #387C12;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .community-box button:hover,
+    .providers-box button:hover {
+      background-color: #636e72;
+    }
