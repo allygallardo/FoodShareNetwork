@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Current Inventory (Provider) | FoodShare Network</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #81BC06, #a1d85e);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #387C12;
+      margin: 0;
+    }
+
+    .settings-icon {
+      font-size: 1.5rem;
+      color: #636e72;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .settings-icon:hover {
+      color: #387C12;
+    }
+
+    .container {
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 700px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .container {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 1rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .item-photo {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #2d3436;
+    }
+
+    .info-line {
+      font-size: 0.95rem;
+      color: #2d3436;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      background-color: #e8f5e9;
+      color: #387C12;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .button-group {
+      margin-top: auto;
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    button {
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .edit-btn {
+      background-color: #387C12;
+      color: white;
+    }
+
+    .edit-btn:hover {
+      background-color: #2e6a0f;
+    }
+
+    .delete-btn {
+      background-color: #d63031;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background-color: #b71c1c;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      color: #2d3436;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FoodShare Network – Current Inventory (Provider)</h1>
+    <span class="settings-icon" title="Provider Settings">⚙️</span>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" class="item-photo" alt="Item Photo">
+      <h2>Organic Carrots</h2>
+      <p class="info-line"><strong>Price:</strong> $3.99</p>
+      <p class="info-line"><strong>Quantity:</strong> 25 lbs</p>
+
+      <div class="tags">
+        <span class="tag">Vegan</span>
+        <span class="tag">Low Sugar</span>
+        <span class="tag">Gluten Free</span>
+      </div>
+
+      <div class="button-group">
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" class="item-photo" alt="Item Photo">
+      <h2>Fresh Baguettes</h2>
+      <p class="info-line"><strong>Price:</strong> $2.50</p>
+      <p class="info-line"><strong>Quantity:</strong> 40 pieces</p>
+
+      <div class="tags">
+        <span class="tag">Vegetarian</span>
+      </div>
+
+      <div class="button-group">
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 FoodShare Network
+  </footer>
+</body>
+</html>

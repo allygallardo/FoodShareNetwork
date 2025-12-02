@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provider – Confirm Pickup | FoodShare Network</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #81BC06, #a1d85e);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #387C12;
+      margin: 0;
+    }
+
+    .container {
+      margin-top: 3rem;
+      width: 95%;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    h2 {
+      margin: 0;
+      color: #2d3436;
+    }
+
+    .info-line {
+      font-size: 1rem;
+      color: #2d3436;
+      padding: 0.3rem 0;
+    }
+
+    .divider {
+      height: 1px;
+      background-color: #dfe6e9;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .item-list {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .item-row {
+      background: #f8fff4;
+      border: 1px solid #c2e5a1;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+      color: #2d3436;
+    }
+
+    button {
+      padding: 0.8rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      width: 50%;
+      margin-top: 1.5rem;
+    }
+
+    .confirm-button {
+      background-color: #387C12;
+      color: white;
+    }
+
+    .confirm-button:hover {
+      background-color: #2e6a0f;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      color: #2d3436;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>FoodShare Network – Order Request</h1>
+</header>
+
+<div class="container">
+
+  <h2>Confirm Order Pickup</h2>
+
+  <div class="divider"></div>
+
+  <p class="info-line"><strong>User Name:</strong> Jane Doe</p>
+  <p class="info-line"><strong>Pickup Location:</strong> Downtown FoodShare Center</p>
+  <p class="info-line"><strong>Scheduled Pickup Time:</strong> March 14, 2025 – 2:30 PM</p>
+  <p class="info-line"><strong>Order Total:</strong> $12.75</p>
+
+  <h3 style="color:#387C12; margin-top:1rem;">Items in Order</h3>
+
+  <div class="item-list">
+    <div class="item-row">
+      <span>Fresh Apples</span>
+      <strong>2 bags</strong>
+    </div>
+    <div class="item-row">
+      <span>Whole Grain Bread</span>
+      <strong>1 loaf</strong>
+    </div>
+    <div class="item-row">
+      <span>Eggs</span>
+      <strong>1 dozen</strong>
+    </div>
+  </div>
+
+  <button class="confirm-button">Confirm Order Request</button>
+  <button class="confirm-button">Reject Order Request</button>
+  <button class="confirm-button">Confirm Order Pick-up</button>
+
+</div>
+
+<footer>
+  &copy; 2025 FoodShare Network
+</footer>
+
+</body>
+</html>
