@@ -5,7 +5,8 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"--poll"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.2",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "react-helmet": "^6.1.0"
   }
 }

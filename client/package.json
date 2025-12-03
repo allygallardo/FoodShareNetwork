@@ -11,12 +11,14 @@
     "axios": "^1.13.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-helmet": "^6.1.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.9.5",
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
     "styled-components": "^6.1.19",
     "timeago": "^1.6.7",
+    "vite": "^7.2.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

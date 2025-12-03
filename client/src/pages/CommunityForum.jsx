@@ -3,11 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Postcard from '../components/Postcard.jsx'
 import axios from "axios";
-import Navbar from "../components/Navbar.jsx";
 import './communityforum.css';
+import Navbar from './Navbar.jsx';
 
 const Container = styled.div `
     margin-top: 2rem;
+    margin-left: 30rem;
     background-color: #fff;
     border-radius: 14px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
@@ -16,6 +17,7 @@ const Container = styled.div `
     max-width: 700px; 
     display: flex;
     flex-direction: column;`
+
 
 const PostsContainer = styled.div`
 `;
@@ -32,10 +34,7 @@ const CommunityForum = () => {
 
     return (
         <>
-        <header>
-            <h1>FoodShare Network - Community Forum</h1>
-            <span class="settings-icon" title="Settings">⚙️</span>
-        </header>
+        <Navbar/>
         <Container>
             <h2>Community Blog Forum</h2>
 

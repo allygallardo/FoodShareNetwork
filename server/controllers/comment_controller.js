@@ -23,7 +23,6 @@ export const updateComment = async (req, res, next) =>{
     }
 };
 
-// to TEST
 export const deleteComment = async (req, res, next) =>{
     try{
         const comment = await Comment.findById(res.params.id)

@@ -1,17 +1,20 @@
 import express from "express";
-import { signup, signin } from "../controllers/auth_controller.js";
+import { studentsignup, studentsignin } from "../controllers/auth_controller.js";
+import { providersignup, providersignin } from "../controllers/auth_controller.js";
 
 const router = express.Router();
 
-//CREATE A USER
-router.post("/signup", signup)
-// router.post("/studentsignup", )
-// router.post("/providerignup", )
+//CREATE A student
+router.post("/studentsignup", studentsignup)
 
-//SIGN IN
-router.post("/signin", signin)
+//student SIGN IN
+router.post("/studentsignin", studentsignin)
 
-// //GOOGLE AUTH
-// router.post("/google", )
+//CREATE A provider
+router.post("/providersignup", providersignup)
+
+//provider SIGN IN
+router.post("/providersignin", providersignin)
+
 
 export default router;

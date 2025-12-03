@@ -47,4 +47,4 @@ export const getStudent = async (req,res,next)=>{
     }
 };
 
-// subscribe or unsubscribe other student? maybe
+// subscribe or unsubscribe to providers

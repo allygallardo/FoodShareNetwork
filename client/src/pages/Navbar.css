@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  color: #387C12;
+  padding-right: 100px;
+}
+
+.settings-icon {
+  font-size: 1.6rem;
+  color: #636e72;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding-top: 20px;
+}
+
+.settings-icon:hover {
+  color: #387C12;
+}
+
+nav {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2d3436;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #387C12;
+  color: white;
+}
