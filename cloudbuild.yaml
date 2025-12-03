@@ -1,0 +1,5 @@
+steps:
+  - name: 'gr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/foodshare-network-480016/fsnetwork-gloud/fsnetworkimage:v1','.'] 
+images:
+  - 'us-central1-docker.pkg.dev/foodshare-network-480016/fsnetwork-gloud/fsnetworkimage:v1'

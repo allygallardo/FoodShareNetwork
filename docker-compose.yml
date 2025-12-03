@@ -11,7 +11,7 @@ services:
       - ./server:/app
       - /app/node_modules
     ports:
-     - 3000:3000
+     - 3001:3001
     
   frontend:
     build:
@@ -22,6 +22,7 @@ services:
       - ./client:/app
       - /app/node_modules
     ports:
-      - 3001:3001
+      - 3000:3000
+    command: npm start
     depends_on: 
       - api
