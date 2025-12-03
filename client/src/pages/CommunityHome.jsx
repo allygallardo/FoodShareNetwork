@@ -1,4 +1,5 @@
 import './communityhome.css';
+import { Link, useNavigate } from "react-router-dom";
 
 const CommunityHome = () => {
 
@@ -18,7 +19,9 @@ const CommunityHome = () => {
           <div class="card">
             <h2>View Community Blog Posts</h2>
             <p>Read updates, recipes, and stories from the FoodShare community.</p>
-            <button>View Blog Posts</button>
+            <Link to ="/communityforum">
+              <button>View Blog Posts</button>
+            </Link>
           </div>
           <div class="card">
             <h2>View Your Posts</h2>
@@ -28,7 +31,9 @@ const CommunityHome = () => {
           <div class="card">
             <h2>Create New Blog Post</h2>
             <p>Share your story, recipes, or community updates with others.</p>
-            <button>Create Post</button>
+            <Link to ="/createpost">
+              <button>Create Post</button>
+            </Link>
           </div>
         </div>
       </body>
