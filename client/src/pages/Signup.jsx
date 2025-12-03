@@ -1,6 +1,28 @@
 import './signup.css';
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import React, { useState } from "react";
+import { loginFailure, loginStart, loginSuccess } from "../redux/userSlice";
 
 const Signup = () => {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+
+    const dispatch = useDispatch(); 
+    const navigate = useNavigate();
+
+    const handleSignup = async (e) => {
+          e.preventDefault();
+          dispatch(loginStart())
+          try{
+             const res = await axios.post("/auth/signup", {email, username, password})
+             dispatch(loginSuccess(res.data)) && navigate(`/userlanding`)
+          }catch(err){
+             dispatch(loginFailure())
+          }
+       }
  return (
    <>
         <head>
@@ -13,18 +35,15 @@ const Signup = () => {
 
             <form id="userForm" className="active">
                 <label for="userEmail">Email</label>
-                <input type="email" id="userEmail" placeholder="Enter your email..." required />
+                <input type="email" id="userEmail" placeholder="Enter your email..." required onChange={e=>setEmail(e.target.value)}/>
 
                 <label for="userUsername">Username</label>
-                <input type="text" id="userUsername" placeholder="Choose a username..." required />
+                <input type="text" id="userUsername" placeholder="Choose a username..." required onChange={e=>setUsername(e.target.value)}/>
 
                 <label for="userPassword">Password</label>
-                <input type="password" id="userPassword" placeholder="Create a password..." required />
+                <input type="password" id="userPassword" placeholder="Create a password..." required onChange={e=>setPassword(e.target.value)}/>
 
-                <label for="userConfirm">Confirm Password</label>
-                <input type="password" id="userConfirm" placeholder="Confirm your password..." required />
-
-                <button type="submit" className="login-button">Sign Up as User</button>
+                <button type="submit" className="login-button" onClick={handleSignup} >Sign Up as User</button>
                 <p className="forgot-password-sign-up">Already have an account? <a href="/">Log in</a></p>
             </form>
         </div>

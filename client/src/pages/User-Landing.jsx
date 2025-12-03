@@ -5,8 +5,11 @@ import { userSlice } from '../redux/userSlice';
 import { logout } from "../redux/userSlice";
 import axios from "axios";
 import { useDispatch } from "react-redux";
+import {persistor} from "../redux/store.js";
 
 import styled from "styled-components";
+
+
 const User = styled.div`
   display: flex;
   align-item: center;
@@ -23,11 +26,16 @@ const Avatar = styled.img`
 const UserLanding = () => {
   const {currentUser} = useSelector(state=>state.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleDelete = async () => {
       await axios.delete(`/students/${currentUser._id}`);
       // delete their posts as well?
       dispatch(logout(currentUser._id));
+     }
+
+  const handleLogout = async () => {
+        dispatch(logout()) && navigate(`/`);
      }
 
  return (
@@ -53,6 +61,7 @@ const UserLanding = () => {
           </Link>)}
           <span class="settings-icon" title="User Settings">⚙️</span>
           <button onClick={handleDelete}>DELETE ACCOUNT</button>
+          <button onClick={handleLogout}>SIGN OUT</button>
         </header>
 
 
@@ -76,9 +85,10 @@ const UserLanding = () => {
           <div class="card community-box">
             <h2>Community</h2>
             <p>Connect, share, and help others in your area.</p>
-            <button >Go to Community Page</button>
+            <Link to ="/communityhome">
+              <button >Go to Community Page</button>
+            </Link>
           </div>
-
           <div class="card providers-box">
             <h2>Find Providers</h2>
             <p>Search for nearby food pantries or partner stores.</p>

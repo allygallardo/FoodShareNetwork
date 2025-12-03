@@ -5,8 +5,9 @@ import React from "react";
 import Login from "./pages/Login.jsx"; 
 import Signup from "./pages/Signup.jsx";
 import CommunityHome from "./pages/CommunityHome.jsx";
-import CommunityPosts from "./pages/CommunityPosts.jsx";
+import CommunityForum from "./pages/CommunityForum.jsx";
 import UserLanding from "./pages/User-Landing.jsx";
+import CreatePost from "./pages/Community-create-post.jsx";
 
 //components
 
@@ -22,8 +23,9 @@ function App() {
           <Route path="/" element={<Login/>}/>//
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/communityhome" element={<CommunityHome/>}/>
-          <Route path="/communityposts" element={<CommunityPosts/>}/>
+          <Route path="/communityforum" element={<CommunityForum/>}/>
           <Route path="/userlanding" element={<UserLanding/>}/>
+          <Route path="/createpost" element={<CreatePost/>}/>
         </Routes>
       </BrowserRouter>
     </>
