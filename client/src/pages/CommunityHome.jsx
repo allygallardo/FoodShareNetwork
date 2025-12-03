@@ -1,20 +1,25 @@
 import './communityhome.css';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Navbar from './Navbar.jsx';
+import styled from "styled-components";
+
+const CardContainer = styled.div`
+    margin-top: 5rem;
+    margin-left: 20rem;
+    width: 90%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+`
 
 const CommunityHome = () => {
 
  return (
    <>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Community Home | FoodShare Network</title>
-      </head>
       <body>
-        <header>
-          <h1>FoodShare Network - Community</h1>
-          <span class="settings-icon" title="Community Settings">⚙️</span>
-        </header>
+        <Navbar/>
         <div class="container">
           <div class="card">
             <h2>View Community Blog Posts</h2>

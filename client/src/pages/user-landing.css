@@ -66,6 +66,7 @@ body {
       color: #2d3436;
       margin-bottom: 1rem;
       font-size: 1.2rem;
+      text-align: left;
     }
 
     .activity-log ul {
