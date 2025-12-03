@@ -56,7 +56,7 @@ app.use((err, req, res, next) => {
 /*
     Part III: LISTENER
 */
-app.listen(3000, () => {           
+app.listen(3001, () => {           
     connect()
     console.log("Connected to server")
 });
