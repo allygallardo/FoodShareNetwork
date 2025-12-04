@@ -52,8 +52,8 @@ return (
                     <div class="button-group">
                         <Link to ="/communityforum">
                             <button type="submit" class="publish-btn" onClick={addPost}>Publish</button>
-                            <button type="button" class="cancel-btn" onclick="cancelPost()">Cancel</button>
                         </Link>
+                        <button type="button" class="cancel-btn" onclick="cancelPost()">Cancel</button>
                     </div>
                 </Form>
             </div>
