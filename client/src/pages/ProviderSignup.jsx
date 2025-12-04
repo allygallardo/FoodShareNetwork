@@ -32,7 +32,7 @@ const ProviderSignup = () => {
           dispatch(loginStart())
           try{
              const res = await axios.post("/auth/providersignup", {email, username, password, number});
-             dispatch(loginSuccess(res.data)) && navigate(`/providerlanding`);
+             dispatch(loginSuccess(res.data)) && navigate(`/providersignin`);
           }catch(err){
              dispatch(loginFailure());
           }
